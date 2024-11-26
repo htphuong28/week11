@@ -1,3 +1,5 @@
+package groceries
+
 import scala.collection.mutable.Map
 
 /** A `Player` object represents a player character controlled by the real-life user
@@ -7,17 +9,23 @@ import scala.collection.mutable.Map
   * for instance.
   *
   * @param startingArea  the player’s initial location */
+
 class Player(startingArea: Area):
 
   private var currentLocation = startingArea        // gatherer: changes in relation to the previous location
   private var quitCommandGiven = false              // one-way flag
-  private val storedItems = Map[String, Item]()       // where the player's items are stored
+  private val storedItems = Map[String, Item]()     // where the player's items are stored
+  private var wallet: Int = 0                       // the amounf of money the player has
 
   /** Determines if the player has indicated a desire to quit the game. */
   def hasQuit = this.quitCommandGiven
 
   /** Returns the player’s current location. */
   def location = this.currentLocation
+
+  /* def buy(itemName: String): String
+  def callMom(itemName: String): String
+  def interact(npc: String): String */
 
   def drop(itemName: String): String =
     storedItems.remove(itemName) match
@@ -52,18 +60,25 @@ class Player(startingArea: Area):
     this.currentLocation = destination.getOrElse(this.currentLocation)
     if destination.isDefined then s"You go $direction." else s"You can't go $direction."
 
-
-  /** Causes the player to rest for a short while (this has no substantial effect in game terms).
-    * Returns a description of what happened. */
-  def rest() =
-    "You rest for a while. Better get a move on, though."
-
-
   /** Signals that the player wants to quit the game. Returns a description of what happened within
     * the game as a result (which is the empty string, in this case). */
   def quit() =
     this.quitCommandGiven = true
     ""
+
+  def setMoney(amount: Int) =
+    this.wallet = amount
+    s"Your balance: ${this.wallet}"
+
+  def addMoney(amount: Int) =
+    this.wallet += amount
+    s"You received: ${amount}\nYour balance: ${this.wallet}"
+
+  def deductMoney(amount: Int) = (this.wallet - amount) match
+    case remaining if remaining < 0 => "You don't have enough money to buy this."
+    case remaining if remaining >= 0 =>
+      this.wallet -= amount
+      s"You spent: ${amount}\nYour balance: ${this.wallet}"
 
   /** Returns a brief description of the player’s state, for debugging purposes. */
   override def toString = "Now at: " + this.location.name
