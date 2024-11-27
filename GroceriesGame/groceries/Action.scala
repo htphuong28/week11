@@ -10,11 +10,11 @@ class Action(input: String):
   private val verb        = commandText.takeWhile( _ != ' ' )
   private val modifiers   = commandText.drop(verb.length).trim
 
-  /* def execute(actor: Player): Option[String] =
+  def execute(actor: Player): Option[String] =
     this.verb match
       case "go"                     => Some(actor.go(this.modifiers))
       case "call mom"               => Some(actor.callMom)
-      case "interact with"          => Some(actor.interact(this.modifiers))
+      //case "interact with"          => Some(actor.interact(this.modifiers))
       case "quit"                   => Some(actor.quit())
       case "inventory"              => Some(actor.inventory)
       case "examine"                => Some(actor.examine(this.modifiers))
@@ -22,7 +22,7 @@ class Action(input: String):
       case "drop"                   => Some(actor.drop(this.modifiers))
       case "buy"                    => Some(actor.buy(this.modifiers))
       case other                    => None
-  */
+
   
   /** Returns a textual description of the action object, for debugging purposes. */
   override def toString = s"$verb (modifiers: $modifiers)"

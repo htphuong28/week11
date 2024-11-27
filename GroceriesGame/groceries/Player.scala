@@ -23,9 +23,19 @@ class Player(startingArea: Area):
   /** Returns the player’s current location. */
   def location = this.currentLocation
 
-  /* def buy(itemName: String): String
-  def callMom(itemName: String): String
-  def interact(npc: String): String */
+  def buy(itemName: String): String =
+    currentLocation.onSale.get(itemName) match
+      case Some(item) => useMoney(item.itemPrice) match
+        case "You don't have enough money to buy this." => "Purchase failed"
+        case other => 
+          storedItems += item.name -> item
+          s"You purchased the ${itemName}."
+      case None => s"There is no ${itemName} available to buy."
+      
+
+  def callMom(itemName: String): String = "Bring home    for your sister's birthday party!"
+  
+  /*def interact(npc: String): String */
 
   def drop(itemName: String): String =
     storedItems.remove(itemName) match
@@ -74,7 +84,7 @@ class Player(startingArea: Area):
     this.wallet += amount
     s"You received: ${amount}\nYour balance: ${this.wallet}"
 
-  def deductMoney(amount: Int) = (this.wallet - amount) match
+  def useMoney(amount: Int) = (this.wallet - amount) match
     case remaining if remaining < 0 => "You don't have enough money to buy this."
     case remaining if remaining >= 0 =>
       this.wallet -= amount

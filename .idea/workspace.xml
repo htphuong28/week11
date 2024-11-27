@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="214a4e1d-d12b-4abb-b39e-850d4a781729" name="Changes" comment="action and area">
-      <change afterPath="$PROJECT_DIR$/GroceriesGame/groceries/NPC.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroceriesGame/GroceriesGame.iml" beforeDir="false" afterPath="$PROJECT_DIR$/GroceriesGame/GroceriesGame.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroceriesGame/groceries/Adventure.scala" beforeDir="false" afterPath="$PROJECT_DIR$/GroceriesGame/groceries/Adventure.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroceriesGame/groceries/Action.scala" beforeDir="false" afterPath="$PROJECT_DIR$/GroceriesGame/groceries/Action.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GroceriesGame/groceries/Area.scala" beforeDir="false" afterPath="$PROJECT_DIR$/GroceriesGame/groceries/Area.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GroceriesGame/groceries/Player.scala" beforeDir="false" afterPath="$PROJECT_DIR$/GroceriesGame/groceries/Player.scala" afterDir="false" />
     </list>
@@ -110,7 +108,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732638797833</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="action and area">
+      <option name="closed" value="true" />
+      <created>1732646738920</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1732646738920</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

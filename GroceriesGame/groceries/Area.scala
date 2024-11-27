@@ -5,14 +5,16 @@ import scala.collection.mutable.Map
 class Area(var name: String, var description: String):
 
   private val neighbors = Map[String, Area]()
-  private val pickableItems = Map[String, Item]()
-  private val buyableItems = Map[String, Item]()
+  private val items = Map[String, Item]()
+  
+  private def pickableItems = items.filter( (name, item) => !item.isBuyable )
+  private def buyableItems = items.filter( (name, item) => item.isBuyable )
 
-  def addItem(item: Item) = if item.isBuyable then this.buyableItems += item.name -> item else pickableItems += item.name -> item
+  def onSale = buyableItems
 
-  def removeItem(itemName: String) = 
-    if this.buyableItems.contains(itemName) then this.buyableItems.remove(itemName)
-    else this.pickableItems.remove(itemName)
+  def addItem(item: Item) = this.items += item.name -> item
+
+  def removeItem(itemName: String) = this.items.remove(itemName)
 
   def neighbor(direction: String) = this.neighbors.get(direction)
 
