@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="214a4e1d-d12b-4abb-b39e-850d4a781729" name="Changes" comment="fix item">
+    <list default="true" id="214a4e1d-d12b-4abb-b39e-850d4a781729" name="Changes" comment="action and area">
+      <change afterPath="$PROJECT_DIR$/GroceriesGame/groceries/NPC.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroceriesGame/groceries/Item.scala" beforeDir="false" afterPath="$PROJECT_DIR$/GroceriesGame/groceries/Item.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroceriesGame/GroceriesGame.iml" beforeDir="false" afterPath="$PROJECT_DIR$/GroceriesGame/GroceriesGame.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroceriesGame/groceries/Adventure.scala" beforeDir="false" afterPath="$PROJECT_DIR$/GroceriesGame/groceries/Adventure.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroceriesGame/groceries/Area.scala" beforeDir="false" afterPath="$PROJECT_DIR$/GroceriesGame/groceries/Area.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroceriesGame/groceries/Player.scala" beforeDir="false" afterPath="$PROJECT_DIR$/GroceriesGame/groceries/Player.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,12 +32,18 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/htphuong28/week11.git&quot;,
+<<<<<<< HEAD
     &quot;accountId&quot;: &quot;492e48fa-c1c2-4fe0-bb58-ee8310741265&quot;
   }
 }</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
+=======
+    &quot;accountId&quot;: &quot;b3709435-3d5a-4662-a565-2db2ccf4f874&quot;
+  }
+}</component>
+>>>>>>> 71af01e09d5db4e77191f6160ecc3f75ed4f9e76
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
   </component>
@@ -93,6 +103,7 @@
       <option name="project" value="LOCAL" />
       <updated>1732398634891</updated>
     </task>
+<<<<<<< HEAD
     <task id="LOCAL-00004" summary="add item">
       <option name="closed" value="true" />
       <created>1732400764391</created>
@@ -126,6 +137,25 @@
       <updated>1732401298339</updated>
     </task>
     <option name="localTasksCounter" value="8" />
+=======
+    <task id="LOCAL-00004" summary="action and area">
+      <option name="closed" value="true" />
+      <created>1732573597668</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1732573597668</updated>
+    </task>
+    <task id="LOCAL-00005" summary="action and area">
+      <option name="closed" value="true" />
+      <created>1732638797833</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1732638797833</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+>>>>>>> 71af01e09d5db4e77191f6160ecc3f75ed4f9e76
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -142,8 +172,13 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
     <MESSAGE value="hello" />
+<<<<<<< HEAD
     <MESSAGE value="add item" />
     <MESSAGE value="fix item" />
     <option name="LAST_COMMIT_MESSAGE" value="fix item" />
+=======
+    <MESSAGE value="action and area" />
+    <option name="LAST_COMMIT_MESSAGE" value="action and area" />
+>>>>>>> 71af01e09d5db4e77191f6160ecc3f75ed4f9e76
   </component>
 </project>
