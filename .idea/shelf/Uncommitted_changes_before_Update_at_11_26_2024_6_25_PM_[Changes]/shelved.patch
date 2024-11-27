@@ -1,0 +1,203 @@
+Index: GroceriesGame/groceries/Action.scala
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/GroceriesGame/groceries/Action.scala b/GroceriesGame/groceries/Action.scala
+new file mode 100644
+--- /dev/null	(date 1732638053095)
++++ b/GroceriesGame/groceries/Action.scala	(date 1732638053095)
+@@ -0,0 +1,30 @@
++package o1.adventure
++
++/** The class `Action` represents actions that a player may take in a text adventure game.
++  * `Action` objects are constructed on the basis of textual commands and are, in effect,
++  * parsers for such commands. An action object is immutable after creation.
++  * @param input  a textual in-game command such as “go east” or “rest” */
++class Action(input: String):
++
++  private val commandText = input.trim.toLowerCase
++  private val verb        = commandText.takeWhile( _ != ' ' )
++  private val modifiers   = commandText.drop(verb.length).trim
++
++  /* def execute(actor: Player): Option[String] =
++    this.verb match
++      case "go"                     => Some(actor.go(this.modifiers))
++      case "call mom"               => Some(actor.callMom)
++      case "interact with"          => Some(actor.interact(this.modifiers))
++      case "quit"                   => Some(actor.quit())
++      case "inventory"              => Some(actor.inventory)
++      case "examine"                => Some(actor.examine(this.modifiers))
++      case "get"                    => Some(actor.get(this.modifiers))
++      case "drop"                   => Some(actor.drop(this.modifiers))
++      case "buy"                    => Some(actor.buy(this.modifiers))
++      case other                    => None
++  */
++  
++  /** Returns a textual description of the action object, for debugging purposes. */
++  override def toString = s"$verb (modifiers: $modifiers)"
++
++end Action
+\ No newline at end of file
+Index: .idea/material_theme_project_new.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/material_theme_project_new.xml b/.idea/material_theme_project_new.xml
+new file mode 100644
+--- /dev/null	(date 1732638053095)
++++ b/.idea/material_theme_project_new.xml	(date 1732638053095)
+@@ -0,0 +1,12 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="MaterialThemeProjectNewConfig">
++    <option name="metadata">
++      <MTProjectMetadataState>
++        <option name="migrated" value="true" />
++        <option name="pristineConfig" value="false" />
++        <option name="userId" value="2317277b:192fde341d1:-7ffe" />
++      </MTProjectMetadataState>
++    </option>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"214a4e1d-d12b-4abb-b39e-850d4a781729\" name=\"Changes\" comment=\"fix item\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GroceriesGame/groceries/Item.scala\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GroceriesGame/groceries/Item.scala\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"CompilerWorkspaceConfiguration\">\r\n    <option name=\"AUTO_SHOW_ERRORS_IN_EDITOR\" value=\"false\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;,\r\n    &quot;assignee&quot;: &quot;htphuong28&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\">{\r\n  &quot;selectedUrlAndAccountId&quot;: {\r\n    &quot;url&quot;: &quot;https://github.com/htphuong28/week11.git&quot;,\r\n    &quot;accountId&quot;: &quot;492e48fa-c1c2-4fe0-bb58-ee8310741265&quot;\r\n  }\r\n}</component>\r\n  <component name=\"ProblemsViewState\">\r\n    <option name=\"selectedTabId\" value=\"CurrentFile\" />\r\n  </component>\r\n  <component name=\"ProjectCodeStyleSettingsMigration\">\r\n    <option name=\"version\" value=\"2\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 2\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2pGgo3LA1prvJ5goHeujUcGiRZZ\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;Application.main.executor&quot;: &quot;Run&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;master&quot;,\r\n    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,\r\n    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/Admin/IdeaProjects/week11&quot;\r\n  }\r\n}</component>\r\n  <component name=\"ScalaProjectSettings\">\r\n    <option name=\"scala3DisclaimerShown\" value=\"true\" />\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"214a4e1d-d12b-4abb-b39e-850d4a781729\" name=\"Changes\" comment=\"\" />\r\n      <created>1732397997599</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1732397997599</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"init\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1732398142958</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1732398142958</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"init\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1732398186966</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1732398186966</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"hello\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1732398634891</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1732398634891</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"add item\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1732400764391</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1732400764391</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"add item\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1732400886560</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1732400886560</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"fix item\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1732400941172</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1732400941172</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"fix item\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1732401298339</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1732401298339</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"8\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"init\" />\r\n    <MESSAGE value=\"hello\" />\r\n    <MESSAGE value=\"add item\" />\r\n    <MESSAGE value=\"fix item\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"fix item\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision c5d0770d64539c554d79fe3a86f370621e66ecf4)
++++ b/.idea/workspace.xml	(date 1732638256155)
+@@ -4,9 +4,11 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="214a4e1d-d12b-4abb-b39e-850d4a781729" name="Changes" comment="fix item">
++    <list default="true" id="214a4e1d-d12b-4abb-b39e-850d4a781729" name="Changes" comment="hello">
++      <change afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/GroceriesGame/groceries/Action.scala" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/GroceriesGame/groceries/Area.scala" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GroceriesGame/groceries/Item.scala" beforeDir="false" afterPath="$PROJECT_DIR$/GroceriesGame/groceries/Item.scala" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -25,15 +27,12 @@
+     &quot;assignee&quot;: &quot;htphuong28&quot;
+   }
+ }</component>
+-  <component name="GithubPullRequestsUISettings">{
+-  &quot;selectedUrlAndAccountId&quot;: {
+-    &quot;url&quot;: &quot;https://github.com/htphuong28/week11.git&quot;,
+-    &quot;accountId&quot;: &quot;492e48fa-c1c2-4fe0-bb58-ee8310741265&quot;
+-  }
+-}</component>
+-  <component name="ProblemsViewState">
+-    <option name="selectedTabId" value="CurrentFile" />
+-  </component>
++  <component name="GithubPullRequestsUISettings"><![CDATA[{
++  "selectedUrlAndAccountId": {
++    "url": "https://github.com/htphuong28/week11.git",
++    "accountId": "b3709435-3d5a-4662-a565-2db2ccf4f874"
++  }
++}]]></component>
+   <component name="ProjectCodeStyleSettingsMigration">
+     <option name="version" value="2" />
+   </component>
+@@ -93,39 +92,7 @@
+       <option name="project" value="LOCAL" />
+       <updated>1732398634891</updated>
+     </task>
+-    <task id="LOCAL-00004" summary="add item">
+-      <option name="closed" value="true" />
+-      <created>1732400764391</created>
+-      <option name="number" value="00004" />
+-      <option name="presentableId" value="LOCAL-00004" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1732400764391</updated>
+-    </task>
+-    <task id="LOCAL-00005" summary="add item">
+-      <option name="closed" value="true" />
+-      <created>1732400886560</created>
+-      <option name="number" value="00005" />
+-      <option name="presentableId" value="LOCAL-00005" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1732400886560</updated>
+-    </task>
+-    <task id="LOCAL-00006" summary="fix item">
+-      <option name="closed" value="true" />
+-      <created>1732400941172</created>
+-      <option name="number" value="00006" />
+-      <option name="presentableId" value="LOCAL-00006" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1732400941172</updated>
+-    </task>
+-    <task id="LOCAL-00007" summary="fix item">
+-      <option name="closed" value="true" />
+-      <created>1732401298339</created>
+-      <option name="number" value="00007" />
+-      <option name="presentableId" value="LOCAL-00007" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1732401298339</updated>
+-    </task>
+-    <option name="localTasksCounter" value="8" />
++    <option name="localTasksCounter" value="4" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+@@ -142,8 +109,6 @@
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="init" />
+     <MESSAGE value="hello" />
+-    <MESSAGE value="add item" />
+-    <MESSAGE value="fix item" />
+-    <option name="LAST_COMMIT_MESSAGE" value="fix item" />
++    <option name="LAST_COMMIT_MESSAGE" value="hello" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: GroceriesGame/groceries/Area.scala
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/GroceriesGame/groceries/Area.scala b/GroceriesGame/groceries/Area.scala
+new file mode 100644
+--- /dev/null	(date 1732638053095)
++++ b/GroceriesGame/groceries/Area.scala	(date 1732638053095)
+@@ -0,0 +1,31 @@
++import scala.collection.mutable.Map
++
++class Area(var name: String, var description: String):
++
++  private val neighbors = Map[String, Area]()
++  //private val items = Map[String, Item]()
++
++  /** def addItem(item: Item) = this.items += item.name -> item
++  def contains(itemName: String): Boolean = items.contains(itemName)
++  def removeItem(itemName: String) = items.remove(itemName) */
++
++  def neighbor(direction: String) = this.neighbors.get(direction)
++
++  def setNeighbor(direction: String, neighbor: Area) =
++    this.neighbors += direction -> neighbor
++
++  def setNeighbors(exits: Vector[(String, Area)]) =
++    this.neighbors ++= exits
++
++  def fullDescription: String =
++    //val pickUpItemList = if items.nonEmpty then "\nYou see here: " + this.items.keys.mkString(" ") else ""
++    //val forSaleItemList = if items.nonEmpty then "\nThe vendors here sell: " + this.items.keys.mkString(" ") else ""
++    //val npcList
++    val exitList = "\n\nExits available: " + this.neighbors.keys.mkString(" ")
++    this.description + /* pickUpItemList + forSaleItemList + npcList + */ exitList
++
++  /** Returns a single-line description of the area for debugging purposes. */
++  override def toString =
++    this.name + ": " + this.description.replaceAll("\n", " ").take(150)
++
++end Area
