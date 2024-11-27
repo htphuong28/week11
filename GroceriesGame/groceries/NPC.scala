@@ -1,10 +1,4 @@
 package groceries
-<<<<<<< Updated upstream
-
-class NPC { 
-  
-}
-
 import util.Random
 
 trait NPC (name: String, description: String):
@@ -27,4 +21,3 @@ class HelperNPC(name: String, description: String) extends NPC(name, description
          
     else 
       "Nuh uh"
->>>>>>> Stashed changes
