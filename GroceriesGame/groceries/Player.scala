@@ -1,5 +1,5 @@
 package groceries
-
+import util.Random
 import scala.collection.mutable.Map
 
 /** A `Player` object represents a player character controlled by the real-life user
@@ -16,7 +16,16 @@ class Player(startingArea: Area):
   private var quitCommandGiven = false              // one-way flag
   private val storedItems = Map[String, Item]()     // where the player's items are stored
   private var wallet: Int = 0                       // the amounf of money the player has
-
+  private val requiredList = Map[String, Item]()
+  
+  def haveToBuyList = requiredList
+  
+  def addToRequiredList (item: Item): Unit =
+    requiredList.addOne(item.name, item)
+    
+  def removeFromRequiredList(itemName: Item): Option[Item] =
+    requiredList.remove(itemName)
+  
   /** Determines if the player has indicated a desire to quit the game. */
   def hasQuit = this.quitCommandGiven
 
@@ -33,7 +42,7 @@ class Player(startingArea: Area):
       case None => s"There is no ${itemName} available to buy."
       
 
-  def callMom: String = "Bring home    for your sister's birthday party!"
+  def callMom: String = "Bring home"  + requiredList.keys.mkString(sep: ",") +  "for your sister's birthday party!"
   
   /*def interact(npc: String): String */
 
@@ -89,6 +98,33 @@ class Player(startingArea: Area):
     case remaining if remaining >= 0 =>
       this.wallet -= amount
       s"You spent: ${amount}\nYour balance: ${this.wallet}"
+
+  def interact =
+    location.character match
+      case Some(body) =>
+        body.greeting
+      case None => "There is no one to interact with, silly!"
+
+  def getAnswer(ans: String) =
+    location.character match
+        case Some(body) =>
+          if body.isInteracting ==0 then
+            if ans == "yes" then body.userInteraction
+            else if ans == "no" then "You declined this chance."
+          else if body.isInteracting == 1 then
+            ans.toIntOption match
+              case Some(value) => 
+                body.checkAns(value)
+                if body.answerRight then
+                  val award = requiredList(Random.nextInt(requiredList.size-1))
+                  storedItems += award.name -> award
+                else quit()
+              case None => "Invalid answer"
+          
+            
+          else "Who are you talking to?"
+        case None => "Who are you talking to?"
+
 
   /** Returns a brief description of the player’s state, for debugging purposes. */
   override def toString = "Now at: " + this.location.name

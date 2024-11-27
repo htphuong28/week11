@@ -21,6 +21,8 @@ class Action(input: String):
       case "get"                    => Some(actor.get(this.modifiers))
       case "drop"                   => Some(actor.drop(this.modifiers))
       case "buy"                    => Some(actor.buy(this.modifiers))
+      case "interact"               => Some(actor.interact)
+      case "answer"                 => Some(actor.getAnswer(this.modifiers))
       case other                    => None
 
   

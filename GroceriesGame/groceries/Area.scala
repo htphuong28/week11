@@ -4,12 +4,14 @@ import scala.collection.mutable.Map
 
 class Area(var name: String, var description: String):
 
+  val character = Option[NPC]()
   private val neighbors = Map[String, Area]()
   private val items = Map[String, Item]()
   
   private def pickableItems = items.filter( (name, item) => !item.isBuyable )
   private def buyableItems = items.filter( (name, item) => item.isBuyable )
 
+  def characterExist = character.isDefined
   def onSale = buyableItems
 
   def addItem(item: Item) = this.items += item.name -> item

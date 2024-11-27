@@ -1,23 +1,31 @@
 package groceries
 import util.Random
 
-trait NPC (name: String, description: String):
-  def greeting: String = "Good morning. I'm here to ask you a question. Do you want to answer it?"
-
-  def userInteraction: Nothing
+class NPC (name: String, description: String):
+  private var currentlyInteracting = 0
+  
+  def isInteracting = currentlyInteracting
+  
+  def greeting: String = 
+    currentlyInteracting +=1
+    "Good morning. I'm here to ask you a question. Do you want to answer it? (Yes or No)"
 
   override def toString = this.description
 
-
-class HelperNPC(name: String, description: String) extends NPC(name, description):
-  val num1 = Random(3)
-  val num2 = Random(5)
+  val num1 = Random.nextInt(300)
+  val num2 = Random.nextInt(500)
+  
   def userInteraction = 
+    currentlyInteracting +=1
     "Here's your question: " + num1 + "+" + num2 + "= ?"
     
+  var answerRight = false
   def checkAns(input: Int) =
+    currentlyInteracting +=1
     if input == num1 + num2 then 
+      answerRight = true
       "Congrats"
-         
     else 
       "Nuh uh"
+      
+

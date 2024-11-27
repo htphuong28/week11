@@ -15,5 +15,12 @@ class Adventure:
   private val oldPort     = Area("Old Port", "Albeit abandoned, it's still a good place to go fishing.\nSometimes, vendors propped up here for some reasons.")
   private val beach       = Area("Beach", "Relax, find seashells, make sandcastles, or swim: It's chill out here.")
 
+  val player = Player(house)
+  
+  var turnCount = 0
+  
+  val timeLimit = 40
+  
+  def isComplete = this.player.location == house && this.player.inventory.forall(player.haveToBuyList.contains)
 
 end Adventure
