@@ -7,15 +7,11 @@ package groceries
  * @param isOnSale        determines whether an item is on sale or not
  */
 
-class Item (val name: String, val description: String, private val isQuality: Boolean, private var isOnSale: Boolean, private val price: Int):
-
-  def isGoodCondition = isQuality
-  
-  def itemPrice = this.price
-  
-  def isBuyable = isOnSale
-
+class Item(val name: String,
+           val description: String,
+           val isQuality: Boolean,
+           val isOnSale: Boolean,
+           val price: Int):
   override def toString = this.name
-
 end Item
 

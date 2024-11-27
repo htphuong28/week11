@@ -4,206 +4,59 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< Updated upstream
-    <list default="true" id="214a4e1d-d12b-4abb-b39e-850d4a781729" name="Changes" comment="action and area">
+    <list default="true" id="c338ab43-de4b-4980-a217-6120d355eec8" name="Changes" comment="npc modify">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroceriesGame/groceries/Action.scala" beforeDir="false" afterPath="$PROJECT_DIR$/GroceriesGame/groceries/Action.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroceriesGame/groceries/Adventure.scala" beforeDir="false" afterPath="$PROJECT_DIR$/GroceriesGame/groceries/Adventure.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GroceriesGame/groceries/Area.scala" beforeDir="false" afterPath="$PROJECT_DIR$/GroceriesGame/groceries/Area.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroceriesGame/groceries/Item.scala" beforeDir="false" afterPath="$PROJECT_DIR$/GroceriesGame/groceries/Item.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroceriesGame/groceries/NPC.scala" beforeDir="false" afterPath="$PROJECT_DIR$/GroceriesGame/groceries/NPC.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GroceriesGame/groceries/Player.scala" beforeDir="false" afterPath="$PROJECT_DIR$/GroceriesGame/groceries/Player.scala" afterDir="false" />
-=======
-    <list default="true" id="214a4e1d-d12b-4abb-b39e-850d4a781729" name="Changes" comment="fix item">
-      <change afterPath="$PROJECT_DIR$/GroceriesGame/groceries/KidnapNPC.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GroceriesGame/groceries/NPC.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GroceriesGame/groceries/TradeNPC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
->>>>>>> Stashed changes
+      <change beforePath="$PROJECT_DIR$/GroceriesGame/groceries/TextUI.scala" beforeDir="false" afterPath="$PROJECT_DIR$/GroceriesGame/groceries/TextUI.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CompilerWorkspaceConfiguration">
-    <option name="AUTO_SHOW_ERRORS_IN_EDITOR" value="false" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;htphuong28&quot;
-  }
-}</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/htphuong28/week11.git&quot;,
-<<<<<<< HEAD
-    &quot;accountId&quot;: &quot;492e48fa-c1c2-4fe0-bb58-ee8310741265&quot;
-  }
-}</component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
-  </component>
-=======
-    &quot;accountId&quot;: &quot;b3709435-3d5a-4662-a565-2db2ccf4f874&quot;
-  }
-}</component>
->>>>>>> 71af01e09d5db4e77191f6160ecc3f75ed4f9e76
-  <component name="ProjectCodeStyleSettingsMigration">
-    <option name="version" value="2" />
-  </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 2
-}</component>
-  <component name="ProjectId" id="2pGgo3LA1prvJ5goHeujUcGiRZZ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
+  <component name="RunManager">
+    <configuration name="TextUI" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="groceries.TextUI" />
+      <module name="GroceriesGame" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="groceries.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.TextUI" />
+      </list>
+    </recent_temporary>
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "Merging master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Admin/IdeaProjects/week11"
-  }
-}]]></component>
   <component name="ScalaProjectSettings">
     <option name="scala3DisclaimerShown" value="true" />
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="214a4e1d-d12b-4abb-b39e-850d4a781729" name="Changes" comment="" />
-      <created>1732397997599</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1732397997599</updated>
-    </task>
-    <task id="LOCAL-00001" summary="init">
+    <task id="LOCAL-00001" summary="npc modify">
       <option name="closed" value="true" />
-      <created>1732398142958</created>
+      <created>1732673891558</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1732398142958</updated>
+      <updated>1732673891558</updated>
     </task>
-    <task id="LOCAL-00002" summary="init">
-      <option name="closed" value="true" />
-      <created>1732398186966</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1732398186966</updated>
-    </task>
-    <task id="LOCAL-00003" summary="hello">
-      <option name="closed" value="true" />
-      <created>1732398634891</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1732398634891</updated>
-    </task>
-<<<<<<< HEAD
-    <task id="LOCAL-00004" summary="add item">
-      <option name="closed" value="true" />
-      <created>1732400764391</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1732400764391</updated>
-    </task>
-    <task id="LOCAL-00005" summary="add item">
-      <option name="closed" value="true" />
-      <created>1732400886560</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1732400886560</updated>
-    </task>
-    <task id="LOCAL-00006" summary="fix item">
-      <option name="closed" value="true" />
-      <created>1732400941172</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1732400941172</updated>
-    </task>
-    <task id="LOCAL-00007" summary="fix item">
-      <option name="closed" value="true" />
-      <created>1732401298339</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1732401298339</updated>
-    </task>
-    <option name="localTasksCounter" value="8" />
-=======
-    <task id="LOCAL-00004" summary="action and area">
-      <option name="closed" value="true" />
-      <created>1732573597668</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1732573597668</updated>
-    </task>
-    <task id="LOCAL-00005" summary="action and area">
-      <option name="closed" value="true" />
-      <created>1732638797833</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1732638797833</updated>
-    </task>
-<<<<<<< HEAD
-    <option name="localTasksCounter" value="6" />
->>>>>>> 71af01e09d5db4e77191f6160ecc3f75ed4f9e76
-=======
-    <task id="LOCAL-00006" summary="action and area">
-      <option name="closed" value="true" />
-      <created>1732646738920</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1732646738920</updated>
-    </task>
-    <option name="localTasksCounter" value="7" />
->>>>>>> bfb51cfec4ff35af34f96690282cd420b7ffe180
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="init" />
     <MESSAGE value="hello" />
-<<<<<<< HEAD
-    <MESSAGE value="add item" />
-    <MESSAGE value="fix item" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix item" />
-=======
-    <MESSAGE value="action and area" />
-    <option name="LAST_COMMIT_MESSAGE" value="action and area" />
->>>>>>> 71af01e09d5db4e77191f6160ecc3f75ed4f9e76
+    <MESSAGE value="npc modify" />
+    <option name="LAST_COMMIT_MESSAGE" value="npc modify" />
   </component>
 </project>

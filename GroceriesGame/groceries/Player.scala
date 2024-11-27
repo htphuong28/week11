@@ -17,15 +17,17 @@ class Player(startingArea: Area):
   private val storedItems = Map[String, Item]()     // where the player's items are stored
   private var wallet: Int = 0                       // the amounf of money the player has
   private val requiredList = Map[String, Item]()
+
+  def bag = storedItems
   
   def haveToBuyList = requiredList
-  
+
   def addToRequiredList (item: Item): Unit =
     requiredList.addOne(item.name, item)
-    
-  def removeFromRequiredList(itemName: Item): Option[Item] =
+
+  def removeFromRequiredList(itemName: String): Option[Item] =
     requiredList.remove(itemName)
-  
+
   /** Determines if the player has indicated a desire to quit the game. */
   def hasQuit = this.quitCommandGiven
 
@@ -42,7 +44,7 @@ class Player(startingArea: Area):
       case None => s"There is no ${itemName} available to buy."
       
 
-  def callMom: String = "Bring home"  + requiredList.keys.mkString(sep: ",") +  "for your sister's birthday party!"
+  def callMom: String = "Bring home"  + requiredList.keys.mkString(",") +  "for your sister's birthday party!"
   
   /*def interact(npc: String): String */
 
@@ -105,23 +107,25 @@ class Player(startingArea: Area):
         body.greeting
       case None => "There is no one to interact with, silly!"
 
-  def getAnswer(ans: String) =
+  def getAnswer(ans: String): String =
     location.character match
         case Some(body) =>
           if body.isInteracting ==0 then
             if ans == "yes" then body.userInteraction
             else if ans == "no" then "You declined this chance."
+            else "Invalid"
           else if body.isInteracting == 1 then
             ans.toIntOption match
-              case Some(value) => 
+              case Some(value) =>
                 body.checkAns(value)
                 if body.answerRight then
-                  val award = requiredList(Random.nextInt(requiredList.size-1))
-                  storedItems += award.name -> award
+                  val (name, award) = requiredList.iterator.toVector(Random.nextInt(requiredList.size))
+                  storedItems += name -> award
+                  "You have been awarded" + name
                 else quit()
               case None => "Invalid answer"
-          
-            
+
+
           else "Who are you talking to?"
         case None => "Who are you talking to?"
 

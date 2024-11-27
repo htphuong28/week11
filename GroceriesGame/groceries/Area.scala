@@ -2,9 +2,9 @@ package groceries
 
 import scala.collection.mutable.Map
 
-class Area(var name: String, var description: String):
+class Area(val name: String, val description: String):
 
-  val character = Option[NPC]()
+  var character: Option[NPC] = None
   private val neighbors = Map[String, Area]()
   private val items = Map[String, Item]()
   
@@ -15,14 +15,10 @@ class Area(var name: String, var description: String):
   def onSale = buyableItems
 
   def addItem(item: Item) = this.items += item.name -> item
-
   def removeItem(itemName: String) = this.items.remove(itemName)
-
   def neighbor(direction: String) = this.neighbors.get(direction)
-
   def setNeighbor(direction: String, neighbor: Area) =
     this.neighbors += direction -> neighbor
-
   def setNeighbors(exits: Vector[(String, Area)]) =
     this.neighbors ++= exits
 
@@ -36,5 +32,4 @@ class Area(var name: String, var description: String):
   /** Returns a single-line description of the area for debugging purposes. */
   override def toString =
     this.name + ": " + this.description.replaceAll("\n", " ").take(150)
-
 end Area

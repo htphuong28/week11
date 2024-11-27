@@ -15,7 +15,7 @@ class NPC (name: String, description: String):
   val num1 = Random.nextInt(300)
   val num2 = Random.nextInt(500)
   
-  def userInteraction = 
+  def userInteraction: String = 
     currentlyInteracting +=1
     "Here's your question: " + num1 + "+" + num2 + "= ?"
     

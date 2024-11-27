@@ -15,12 +15,36 @@ class Adventure:
   private val oldPort     = Area("Old Port", "Albeit abandoned, it's still a good place to go fishing.\nSometimes, vendors propped up here for some reasons.")
   private val beach       = Area("Beach", "Relax, find seashells, make sandcastles, or swim: It's chill out here.")
 
+  house.setNeighbors(Vector("west" -> sideStreet, "south" -> mainStreet))
+  supermarket.setNeighbors(Vector("north" -> sideStreet, "south" -> parkingLot, "east" -> mainStreet))
+  park.setNeighbors(Vector("east" -> sideStreet, "up" -> treehouse))
+  treehouse.setNeighbors(Vector("down" -> park))
+  sideStreet.setNeighbors(Vector("west" -> park, "east" -> house, "south" -> supermarket))
+  mainStreet.setNeighbors(Vector("north" -> house, "east" -> beach, "west" -> supermarket, "south" -> oldPort))
+  oldPort.setNeighbors(Vector("down" -> beach, "north" -> mainStreet, "west" -> parkingLot))
+  parkingLot.setNeighbors(Vector("west" -> oldPort, "north" -> supermarket))
+  beach.setNeighbors(Vector("west" -> mainStreet, "up" -> oldPort))
+  
+  park.character = Some(NPC("Teacher", "Your teacher"))
+  
   val player = Player(house)
   
   var turnCount = 0
   
   val timeLimit = 40
   
-  def isComplete = this.player.location == house && this.player.inventory.forall(player.haveToBuyList.contains)
+  def isComplete = this.player.location == house && this.player.bag.keys.forall(player.haveToBuyList.contains)
+  
+  def isOver = this.isComplete || this.player.hasQuit || this.turnCount == this.timeLimit
+  
+  def welcomMessage = "You have a sister. Tomorrow is her birthday. Mom gave you a list of item. Go find the item and check the list."
+  
+  def playTurn(command: String): String =
+    val action = Action(command)
+    val outcomeReport = action.execute(this.player)
+    if outcomeReport.isDefined then
+      this.turnCount += 1
+
+    outcomeReport.getOrElse(s"""Unknown command: "$command".""")
 
 end Adventure
