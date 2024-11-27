@@ -33,7 +33,7 @@ class Player(startingArea: Area):
       case None => s"There is no ${itemName} available to buy."
       
 
-  def callMom(itemName: String): String = "Bring home    for your sister's birthday party!"
+  def callMom: String = "Bring home    for your sister's birthday party!"
   
   /*def interact(npc: String): String */
 

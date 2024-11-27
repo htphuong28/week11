@@ -1,4 +1,4 @@
-package o1.adventure
+package groceries
 
 /** The class `Action` represents actions that a player may take in a text adventure game.
   * `Action` objects are constructed on the basis of textual commands and are, in effect,
